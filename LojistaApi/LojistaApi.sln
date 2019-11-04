@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojistaApi", "LojistaApi.csproj", "{0C259CBC-26B9-41DA-B0C6-53F4CEAD543A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojistaApi", "LojistaApi.csproj", "{0C259CBC-26B9-41DA-B0C6-53F4CEAD543A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojistaApi.Model", "..\LojistaApi.Model\LojistaApi.Model.csproj", "{59E7F627-1E65-4620-83C6-77B675E008EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojistaApi.Util", "..\LojistaApi.Util\LojistaApi.Util.csproj", "{3DB920E7-17E3-44A2-AFA1-FBBE567FB3F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{0C259CBC-26B9-41DA-B0C6-53F4CEAD543A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C259CBC-26B9-41DA-B0C6-53F4CEAD543A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C259CBC-26B9-41DA-B0C6-53F4CEAD543A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59E7F627-1E65-4620-83C6-77B675E008EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E7F627-1E65-4620-83C6-77B675E008EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E7F627-1E65-4620-83C6-77B675E008EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E7F627-1E65-4620-83C6-77B675E008EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB920E7-17E3-44A2-AFA1-FBBE567FB3F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB920E7-17E3-44A2-AFA1-FBBE567FB3F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB920E7-17E3-44A2-AFA1-FBBE567FB3F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB920E7-17E3-44A2-AFA1-FBBE567FB3F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
