@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LojistaApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/solicitacao")]
     [ApiController]
     public class SolicitacaoController : ControllerBase
     {

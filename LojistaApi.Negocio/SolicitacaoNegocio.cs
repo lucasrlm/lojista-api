@@ -15,12 +15,12 @@ namespace LojistaApi.Negocio
 
         public int CriarSolicitacao(SolicitacaoRequisicao solicitacaoRequisicao)
         {
-            return 0;
+            return _solicitacaoRepositorio.CriarSolicitacao(solicitacaoRequisicao);
         }
 
         public void AlterarSolicitacao(int solicitacaoId, SolicitacaoRequisicao solicitacaoRequisicao)
         {
-            return;
+            _solicitacaoRepositorio.AlterarSolicitacao(solicitacaoId, solicitacaoRequisicao);
         }
     }
 }
