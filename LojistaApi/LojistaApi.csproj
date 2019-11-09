@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LojistaApi.Model\LojistaApi.Model.csproj" />
+    <ProjectReference Include="..\LojistaApi.Negocio\LojistaApi.Negocio.csproj" />
   </ItemGroup>
 
 </Project>

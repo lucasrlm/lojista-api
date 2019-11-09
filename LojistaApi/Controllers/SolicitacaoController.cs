@@ -1,4 +1,5 @@
-﻿using LojistaApi.Model;
+﻿using LojistaApi.Model.Solicitacao;
+using LojistaApi.Negocio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LojistaApi.Controllers
@@ -7,16 +8,24 @@ namespace LojistaApi.Controllers
     [ApiController]
     public class SolicitacaoController : ControllerBase
     {
-        [HttpPost]
-        public ActionResult Post([FromBody]Solicitacao solicitacao)
-        {
+        private readonly ISolicitacaoNegocio _solicitacaoNegocio;
 
+        public SolicitacaoController(ISolicitacaoNegocio solicitacaoNegocio)
+        {
+            _solicitacaoNegocio = solicitacaoNegocio;
+        }
+
+        [HttpPost]
+        public ActionResult Post([FromBody]SolicitacaoRequisicao solicitacao)
+        {
+            var solicitacaoId = _solicitacaoNegocio.CriarSolicitacao(solicitacao);
             return Ok(solicitacao);
         }
 
         [HttpPut("{solicitacaoId}")]
-        public ActionResult Put(int solicitacaoId, [FromBody]Solicitacao solicitacao)
+        public ActionResult Put(int solicitacaoId, [FromBody]SolicitacaoRequisicao solicitacao)
         {
+            _solicitacaoNegocio.AlterarSolicitacao(solicitacaoId, solicitacao);
             return Ok(solicitacao);
         }
     }
