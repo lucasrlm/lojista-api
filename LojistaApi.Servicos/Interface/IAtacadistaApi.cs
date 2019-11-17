@@ -1,5 +1,6 @@
 ﻿using LojistaApi.Model;
 using LojistaApi.Model.Solicitacao;
+using LojistaApi.Util;
 
 namespace LojistaApi.Servicos.Interface
 {
@@ -7,6 +8,6 @@ namespace LojistaApi.Servicos.Interface
     {
         RetornoBase CriarSolicitacao(Solicitacao solicitacao);
 
-        void AlterarSolicitacao(int solicitacaoId, Solicitacao solicitacao);
+        void AlterarSolicitacao(int solicitacaoId, SolicitacaoStatus solicitacaoStatus);
     }
 }

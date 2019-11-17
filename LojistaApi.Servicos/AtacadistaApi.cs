@@ -1,6 +1,7 @@
 ﻿using LojistaApi.Model;
 using LojistaApi.Model.Solicitacao;
 using LojistaApi.Servicos.Interface;
+using LojistaApi.Util;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
@@ -42,11 +43,11 @@ namespace LojistaApi.Servicos
             }
         }
 
-        public void AlterarSolicitacao(int solicitacaoId, Solicitacao solicitacao)
+        public void AlterarSolicitacao(int solicitacaoId, SolicitacaoStatus solicitacaoStatus)
         {
-            var json = JsonConvert.SerializeObject(solicitacao);
+            var json = JsonConvert.SerializeObject(solicitacaoStatus);
 
-            var response = _clienteHttp.PutAsync($"/{solicitacaoId}", new StringContent(json, Encoding.UTF8, "application/json")).Result;
+            var response = _clienteHttp.PutAsync(_clienteHttp.BaseAddress + $"/{solicitacaoId}", new StringContent(json, Encoding.UTF8, "application/json")).Result;
 
             if (!response.IsSuccessStatusCode)
             {

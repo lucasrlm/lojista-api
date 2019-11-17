@@ -2,6 +2,7 @@
 using LojistaApi.Model;
 using LojistaApi.Model.Solicitacao;
 using LojistaApi.Servicos.Interface;
+using LojistaApi.Util;
 
 namespace LojistaApi.AcessoDados
 {
@@ -19,9 +20,9 @@ namespace LojistaApi.AcessoDados
             return _atacadistaApi.CriarSolicitacao(solicitacaoRequisicao);
         }
 
-        public void AlterarSolicitacao(int solicitacaoId, SolicitacaoRequisicao solicitacaoRequisicao)
+        public void AlterarSolicitacao(int solicitacaoId, SolicitacaoStatus solicitacaoStatus)
         {
-            _atacadistaApi.AlterarSolicitacao(solicitacaoId, solicitacaoRequisicao);
+            _atacadistaApi.AlterarSolicitacao(solicitacaoId, solicitacaoStatus);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using LojistaApi.Model.Solicitacao;
 using LojistaApi.Negocio.Interfaces;
+using LojistaApi.Util;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LojistaApi.Controllers
@@ -23,7 +24,7 @@ namespace LojistaApi.Controllers
         }
 
         [HttpPut("{solicitacaoId}")]
-        public ActionResult Put(int solicitacaoId, [FromBody]SolicitacaoRequisicao solicitacao)
+        public ActionResult Put(int solicitacaoId, [FromBody]SolicitacaoStatus solicitacao)
         {
             _solicitacaoNegocio.AlterarSolicitacao(solicitacaoId, solicitacao);
             return Ok();
