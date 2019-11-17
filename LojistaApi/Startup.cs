@@ -35,6 +35,8 @@ namespace LojistaApi
             services.AddSingleton<ISolicitacaoNegocio, SolicitacaoNegocio>();
             services.AddSingleton<ISolicitacaoRepositorio, SolicitacaoRepositorio>();
             services.AddSingleton<IAtacadistaApi, AtacadistaApi>();
+            services.AddSingleton<IOrcamentoNegocio, OrcamentoNegocio>();
+            services.AddSingleton<IOrcamentoRepositorio, OrcamentoRepositorio>();
             
             services.AddSwaggerGen(c =>
             {

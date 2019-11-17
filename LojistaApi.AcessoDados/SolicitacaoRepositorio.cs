@@ -1,4 +1,5 @@
 ﻿using LojistaApi.AcessoDados.Interface;
+using LojistaApi.Model;
 using LojistaApi.Model.Solicitacao;
 using LojistaApi.Servicos.Interface;
 
@@ -13,7 +14,7 @@ namespace LojistaApi.AcessoDados
             _atacadistaApi = atacadistaApi;
         }
 
-        public int CriarSolicitacao(SolicitacaoRequisicao solicitacaoRequisicao)
+        public RetornoBase CriarSolicitacao(SolicitacaoRequisicao solicitacaoRequisicao)
         {
             return _atacadistaApi.CriarSolicitacao(solicitacaoRequisicao);
         }

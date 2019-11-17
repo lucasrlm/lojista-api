@@ -1,4 +1,5 @@
 ﻿using LojistaApi.AcessoDados.Interface;
+using LojistaApi.Model;
 using LojistaApi.Model.Orcamento;
 using LojistaApi.Negocio.Interfaces;
 
@@ -13,7 +14,7 @@ namespace LojistaApi.Negocio
             _orcamentoRepositorio = orcamentoRepositorio;
         }
 
-        public int CriarOrcamento(OrcamentoRequisicao orcamentoRequisicao)
+        public RetornoBase CriarOrcamento(OrcamentoRequisicao orcamentoRequisicao)
         {
             return _orcamentoRepositorio.CriarOrcamento(orcamentoRequisicao);
         }

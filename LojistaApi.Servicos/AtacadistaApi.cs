@@ -1,4 +1,5 @@
-﻿using LojistaApi.Model.Solicitacao;
+﻿using LojistaApi.Model;
+using LojistaApi.Model.Solicitacao;
 using LojistaApi.Servicos.Interface;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
@@ -23,7 +24,7 @@ namespace LojistaApi.Servicos
             };
         }
 
-        public int CriarSolicitacao(Solicitacao solicitacao)
+        public RetornoBase CriarSolicitacao(Solicitacao solicitacao)
         {
             var json = JsonConvert.SerializeObject(solicitacao);
 
@@ -33,7 +34,7 @@ namespace LojistaApi.Servicos
             {
                 var contents = response.Content.ReadAsStringAsync().Result;
 
-                return JsonConvert.DeserializeObject<int>(contents);          
+                return JsonConvert.DeserializeObject<RetornoBase>(contents);          
             }
             else
             {
