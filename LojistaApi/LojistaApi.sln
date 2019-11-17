@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojistaApi.Model", "..\Loji
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojistaApi.Util", "..\LojistaApi.Util\LojistaApi.Util.csproj", "{3DB920E7-17E3-44A2-AFA1-FBBE567FB3F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojistaApi.Negocio", "..\LojistaApi.Negocio\LojistaApi.Negocio.csproj", "{1E632D5B-FC3D-4062-8C87-5AB111AF1971}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojistaApi.Negocio", "..\LojistaApi.Negocio\LojistaApi.Negocio.csproj", "{1E632D5B-FC3D-4062-8C87-5AB111AF1971}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojistaApi.AcessoDados", "..\LojistaApi.AcessoDados\LojistaApi.AcessoDados.csproj", "{78830B63-023B-4575-BDE3-CE4C7DD8D819}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojistaApi.AcessoDados", "..\LojistaApi.AcessoDados\LojistaApi.AcessoDados.csproj", "{78830B63-023B-4575-BDE3-CE4C7DD8D819}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojistaApi.Servicos", "..\LojistaApi.Servicos\LojistaApi.Servicos.csproj", "{46A8CBD5-1B52-4C44-85C1-143F38102DE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{78830B63-023B-4575-BDE3-CE4C7DD8D819}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78830B63-023B-4575-BDE3-CE4C7DD8D819}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78830B63-023B-4575-BDE3-CE4C7DD8D819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46A8CBD5-1B52-4C44-85C1-143F38102DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46A8CBD5-1B52-4C44-85C1-143F38102DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46A8CBD5-1B52-4C44-85C1-143F38102DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46A8CBD5-1B52-4C44-85C1-143F38102DE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

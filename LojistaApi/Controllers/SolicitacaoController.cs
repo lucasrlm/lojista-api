@@ -19,14 +19,14 @@ namespace LojistaApi.Controllers
         public ActionResult Post([FromBody]SolicitacaoRequisicao solicitacao)
         {
             var solicitacaoId = _solicitacaoNegocio.CriarSolicitacao(solicitacao);
-            return Ok(solicitacao);
+            return Ok(solicitacaoId);
         }
 
         [HttpPut("{solicitacaoId}")]
         public ActionResult Put(int solicitacaoId, [FromBody]SolicitacaoRequisicao solicitacao)
         {
             _solicitacaoNegocio.AlterarSolicitacao(solicitacaoId, solicitacao);
-            return Ok(solicitacao);
+            return Ok();
         }
     }
 }

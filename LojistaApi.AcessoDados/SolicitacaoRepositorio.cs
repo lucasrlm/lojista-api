@@ -1,18 +1,26 @@
 ﻿using LojistaApi.AcessoDados.Interface;
 using LojistaApi.Model.Solicitacao;
+using LojistaApi.Servicos.Interface;
 
 namespace LojistaApi.AcessoDados
 {
     public class SolicitacaoRepositorio : ISolicitacaoRepositorio
     {
+        private IAtacadistaApi _atacadistaApi;
+
+        public SolicitacaoRepositorio(IAtacadistaApi atacadistaApi)
+        {
+            _atacadistaApi = atacadistaApi;
+        }
+
         public int CriarSolicitacao(SolicitacaoRequisicao solicitacaoRequisicao)
         {
-            return 1;
+            return _atacadistaApi.CriarSolicitacao(solicitacaoRequisicao);
         }
 
         public void AlterarSolicitacao(int solicitacaoId, SolicitacaoRequisicao solicitacaoRequisicao)
         {
-            return;
+            _atacadistaApi.AlterarSolicitacao(solicitacaoId, solicitacaoRequisicao);
         }
     }
 }

@@ -1,6 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
+using LojistaApi.AcessoDados;
+using LojistaApi.AcessoDados.Interface;
+using LojistaApi.Negocio;
+using LojistaApi.Negocio.Interfaces;
+using LojistaApi.Servicos;
+using LojistaApi.Servicos.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +30,12 @@ namespace LojistaApi
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            services.AddHttpClient();
+
+            services.AddSingleton<ISolicitacaoNegocio, SolicitacaoNegocio>();
+            services.AddSingleton<ISolicitacaoRepositorio, SolicitacaoRepositorio>();
+            services.AddSingleton<IAtacadistaApi, AtacadistaApi>();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Api de lojista", Version = "v1" });

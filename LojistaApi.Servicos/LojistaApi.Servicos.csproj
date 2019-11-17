@@ -5,8 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="BaseApi.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NuGet.Core" Version="2.14.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LojistaApi.Model\LojistaApi.Model.csproj" />
-    <ProjectReference Include="..\LojistaApi.Servicos\LojistaApi.Servicos.csproj" />
   </ItemGroup>
 
 </Project>

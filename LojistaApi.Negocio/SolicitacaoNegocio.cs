@@ -6,21 +6,22 @@ namespace LojistaApi.Negocio
 {
     public class SolicitacaoNegocio : ISolicitacaoNegocio
     {
-        private readonly ISolicitacaoRepositorio _solicitacaoRepositorio;
+        private readonly ISolicitacaoRepositorio _atacadistaRepositorio;
 
-        public SolicitacaoNegocio(ISolicitacaoRepositorio solicitacaoRepositorio)
+        public SolicitacaoNegocio(ISolicitacaoRepositorio atacadistaRepositorio)
         {
-            _solicitacaoRepositorio = solicitacaoRepositorio;
+            _atacadistaRepositorio = atacadistaRepositorio;
         }
 
         public int CriarSolicitacao(SolicitacaoRequisicao solicitacaoRequisicao)
         {
-            return _solicitacaoRepositorio.CriarSolicitacao(solicitacaoRequisicao);
+            // var solicitacaoId = _solicitacaoRepositorio.CriarSolicitacao(solicitacaoRequisicao);
+            return _atacadistaRepositorio.CriarSolicitacao(solicitacaoRequisicao);
         }
 
         public void AlterarSolicitacao(int solicitacaoId, SolicitacaoRequisicao solicitacaoRequisicao)
         {
-            _solicitacaoRepositorio.AlterarSolicitacao(solicitacaoId, solicitacaoRequisicao);
+            _atacadistaRepositorio.AlterarSolicitacao(solicitacaoId, solicitacaoRequisicao);
         }
     }
 }
